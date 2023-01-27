@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { loginRouter } = require('./routes');
+const { loginRouter, userRouter } = require('./routes');
 // ...
 
 const app = express();
@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/logind', loginRouter);
+app.use('/user', userRouter);
 // ...
 
 // É importante exportar a constante `app`,
