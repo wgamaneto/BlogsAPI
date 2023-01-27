@@ -6,6 +6,7 @@ const getLogin = async (req, res) => {
   if (!result) {
     return res.status(400).json({ message: 'Invalid fields' });
   }
+
   res.status(200).json({ token: result });
 };
 
